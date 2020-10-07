@@ -91,9 +91,9 @@ function get_balls(){
 		let elements = document.getElementsByClassName(`p${i}`);
 		if (elements[4].checked){
 			let ball = {};
-			ball.v = [0, 0, parseInt(elements[0].value)];
+			ball.v = [0, 0, parseFloat(elements[0].value)];
 			ball.v = add(miph2mps(ball.v), [0,2.24567,0]);
-			ball.w = [-parseInt(elements[1].value), parseInt(elements[2].value), -parseInt(elements[3].value)];
+			ball.w = [-parseFloat(elements[1].value), parseFloat(elements[2].value), -parseFloat(elements[3].value)];
 			ball.w = rpm2rads(ball.w);
 			ball.pos = [0,0,0];
 			ball.color = colors[i-1];
