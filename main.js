@@ -241,11 +241,13 @@ function main(){
 
 function input_pitcher(data){
 	for (let i=1; i<=5; i++){
-		for (let j=1; j<=5; j++){
-			if (j==5)
-				document.getElementById(i.toString()+j.toString()).checked=data[i-1][j-1];
+		for (let j=0; j<=5; j++){
+			if (j==0 && data[i-1][5])
+				document.getElementById(i.toString()+j.toString()).innerHTML=`Pitch ${i}: (${data[i-1][j]})`;
+			else if (j==5)
+				document.getElementById(i.toString()+j.toString()).checked=data[i-1][j];
 			else
-				document.getElementById(i.toString()+j.toString()).value=data[i-1][j-1];
+				document.getElementById(i.toString()+j.toString()).value=data[i-1][j];
 		}
 	}
 }
@@ -255,21 +257,30 @@ function default_pitcher(){
 	let data = []
 	switch(name){
 		case 'custom':
+			for (let i=1; i<=5; i++){
+				document.getElementById(i.toString()+'0').innerHTML=`Pitch ${i}:`;
+			}
 			return;
 		case 'kershaw':
-			data = [[87, 2022, -1484, -192, 1], [91, 2464, -89, -66, 1], [74, -2458, -562, -5, 1], [86, 1706, 1321, 86, 1], ['', '', '', '', 0]];
+			data = [['4-Seam Fastball', 91, 2464, -83, -66, 1], ['Slider', 87, 2040, -1462, -192, 1], ['Curveball', 74, -2461, -560, -4, 1], ['Changeup', 86, 1706, 1321, 86, 1], ['', '', '', '', '', 0]];
 			break;
 		case 'cole':
-			data = [[96, 2039, -1459, -6, 1], [88, 869, 2148, 206, 1], [83, -2242, 1650, 36, 1], [88, 901, -1477, -74, 1], ['', '', '', '', 0]];
+			data = [['4-Seam Fastball', 96, 2039, -1459, -6, 1], ['Slider', 88, 869, 2148, 206, 1], ['Knuckle Curve', 83, -2242, 1650, 36, 1], ['Changeup', 88, 901, -1477, -74, 1], ['', '', '', '', '', 0]];
 			break;
 		case 'degrom':
-			data = [[98, 2253, -998, 6, 1], [92, 1703, 1668, 176, 1], [91, 281, -1560, -101, 1], [84, -1581, 2028, 110, 1], ['', '', '', '', 0]];
+			data = [['4-Seam Fastball', 98, 2253, -998, 6, 1], ['Slider', 92, 1703, 1668, 176, 1], ['Changeup', 91, 281, -1560, -101, 1], ['Curveball', 84, -1581, 2028, 110, 1], ['', '', '', '', '', 0]];
+			break;
+		case 'verlander':
+			data = [['4-Seam Fastball', 94, 2270, -1189, -26, 1], ['Slider', 87, 1696, 1627, 230, 1], ['Curveball', 79, -2478, 1300, 20, 1], ['Changeup', 86, 878, -1618, -122, 1], ['', '', '', '', '', 0]];
+			break;
+		case 'bauer':
+			data = [['4-Seam Fastball', 93, 2482, -1222, 16, 1], ['Cutter', 84, -930, 2498, 131, 1], ['Slider', 80, -789, 2790, 150, 1], ['Knuckle Curve', 79, -2716, 1079, 6, 1], ['Sinker', 93, 2218, -1679, -21, 1], ['Changeup', 84, 870, -1109, -37, 1]];
 			break;
 		case 'glasnow':
-			data = [[96, 2374, -96, 70, 1], [82, -2775, 916, -22, 1], [91, 1074, -1400, -62, 1], ['', '', '', '', 0], ['', '', '', '', 0]];
+			data = [['4-Seam Fastball', 97, 2373, -115, 70, 1], ['Curveball', 82, -2784, 913, -24, 1], ['Changeup', 91, 1077, -1399, -62, 1], ['', '', '', '', '', 0], ['', '', '', '', '', 0]];
 			break;
 		case 'sale':
-			data= [[78, -1018, -2228, -73, 1], [93, 1407, 1903, 2, 1], [85, -192, 1925, 121, 1], [92, 356, 2246, 103, 1], ['', '', '', '', 0]];
+			data = [['Slider', 78, -1018, -2228, -73, 1], ['4-Seam Fastball', 93, 1407, 1903, 2, 1], ['Changeup', 85, -192, 1925, 121, 1], ['2-Seam Fastball', 92, 356, 2246, 103, 1], ['', '', '', '', '', 0]];
 			break;
 	}
 	input_pitcher(data);

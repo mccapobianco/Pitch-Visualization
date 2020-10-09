@@ -12,72 +12,79 @@
 	margin-right: auto;
 	display: block;
 	width: 800px;
-}
+	}
+	td {
+		text-align: right;
+	}
 </style>
 <body style="align-items:center">
 	<center>
 		<i>v</i> = linear velocity (MPH); <i>&omega;</i> = angular velocity (RPM) &nbsp|&nbsp
-		<i>x</i>-axis = left-right (pitcher's view); <i>y</i>-axis = up-down (pitcher's view); <i>z</i>-axis = towards home plate
+		<i>x</i>-axis = left-right; <i>y</i>-axis = up-down; <i>z</i>-axis = towards home plate
 	</center>
 	<center>
-		<b style="color:rgb(255,0,0)">Pitch 1:</b>
-		<label><i>v</i>:</label>
-		<input id=11 class="p1" value="90" size="6px">
-		<label><i>&omega;<sub>x</sub></i>:</label>
-		<input id=12 class="p1" value="2000" size="6px">
-		<label><i>&omega;<sub>y</sub></i>:</label>
-		<input id=13 class="p1" value="0" size="6px">
-		<label><i>&omega;<sub>z</sub></i>:</label>
-		<input id=14 class="p1" value="0" size="6px">
-		<input id=15 type="checkbox" class="p1" checked=true>
-	</center>
-	<center>
-		<b style="color:rgb(255,200,0)">Pitch 2:</b>
-		<label><i>v</i>:</label>
-		<input id=21 class="p2" value="90" size="6px">
-		<label><i>&omega;<sub>x</sub></i>:</label>
-		<input id=22 class="p2" value="0" size="6px">
-		<label><i>&omega;<sub>y</sub></i>:</label>
-		<input id=23 class="p2" value="2000" size="6px">
-		<label><i>&omega;<sub>z</sub></i>:</label>
-		<input id=24 class="p2" value="0" size="6px">
-		<input id=25 type="checkbox" class="p2" checked=true>
-	</center>
-	<center>
-		<b style="color:rgb(0,255,0)">Pitch 3:</b>
-		<label><i>v</i>:</label>
-		<input id=31 class="p3" value="90" size="6px">
-		<label><i>&omega;<sub>x</sub></i>:</label>
-		<input id=32 class="p3" value="-2000" size="6px">
-		<label><i>&omega;<sub>y</sub></i>:</label>
-		<input id=33 class="p3" value="0" size="6px">
-		<label><i>&omega;<sub>z</sub></i>:</label>
-		<input id=34 class="p3" value="0" size="6px">
-		<input id=35 type="checkbox" class="p3" checked=true>
-	</center>
-	<center>
-		<b style="color:rgb(0,0,255)">Pitch 4:</b>
-		<label><i>v</i>:</label>
-		<input id=41 class="p4" value="90" size="6px">
-		<label><i>&omega;<sub>x</sub></i>:</label>
-		<input id=42 class="p4" value="0" size="6px">
-		<label><i>&omega;<sub>y</sub></i>:</label>
-		<input id=43 class="p4" value="-2000" size="6px">
-		<label><i>&omega;<sub>z</sub></i>:</label>
-		<input id=44 class="p4" value="0" size="6px">
-		<input id=45 type="checkbox" class="p4" checked=true>
-	</center>
-	<center>
-		<b style="color:rgb(255,0,255)">Pitch 5:</b>
-		<label><i>v</i>:</label>
-		<input id=51 class="p5" value="90" size="6px">
-		<label><i>&omega;<sub>x</sub></i>:</label>
-		<input id=52 class="p5" value="0" size="6px">
-		<label><i>&omega;<sub>y</sub></i>:</label>
-		<input id=53 class="p5" value="0" size="6px">
-		<label><i>&omega;<sub>z</sub></i>:</label>
-		<input id=54 class="p5" value="2000" size="6px">
-		<input id=55 type="checkbox" class="p5" checked=true>
+		<table>
+			<tr>
+				<td><b id=10 style="color:rgb(255,0,0)">Pitch 1:</b></td>
+				<td><label><i>v</i>:</label></td>
+				<td><input id=11 class="p1" value="90" size="6px"></td>
+				<td><label><i>&omega;<sub>x</sub></i>:</label></td>
+				<td><input id=12 class="p1" value="2000" size="6px"></td>
+				<td><label><i>&omega;<sub>y</sub></i>:</label></td>
+				<td><input id=13 class="p1" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>z</sub></i>:</label></td>
+				<td><input id=14 class="p1" value="0" size="6px"></td>
+				<td><input id=15 type="checkbox" class="p1" checked=true></td>
+			</tr>
+			<tr>
+				<td><b id=20 style="color:rgb(255,200,0)">Pitch 2:</b></td>
+				<td><label><i>v</i>:</label></td>
+				<td><input id=21 class="p2" value="90" size="6px"></td>
+				<td><label><i>&omega;<sub>x</sub></i>:</label></td>
+				<td><input id=22 class="p2" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>y</sub></i>:</label></td>
+				<td><input id=23 class="p2" value="2000" size="6px"></td>
+				<td><label><i>&omega;<sub>z</sub></i>:</label></td>
+				<td><input id=24 class="p2" value="0" size="6px"></td>
+				<td><input id=25 type="checkbox" class="p2" checked=true></td>
+			</tr>
+			<tr>
+				<td><b id=30 style="color:rgb(0,255,0)">Pitch 3:</b></td>
+				<td><label><i>v</i>:</label></td>
+				<td><input id=31 class="p3" value="90" size="6px"></td>
+				<td><label><i>&omega;<sub>x</sub></i>:</label></td>
+				<td><input id=32 class="p3" value="-2000" size="6px"></td>
+				<td><label><i>&omega;<sub>y</sub></i>:</label></td>
+				<td><input id=33 class="p3" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>z</sub></i>:</label></td>
+				<td><input id=34 class="p3" value="0" size="6px"></td>
+				<td><input id=35 type="checkbox" class="p3" checked=true></td>
+			</tr>
+			<tr>
+				<td><b id=40 style="color:rgb(0,0,255)">Pitch 4:</b></td>
+				<td><label><i>v</i>:</label></td>
+				<td><input id=41 class="p4" value="90" size="6px"></td>
+				<td><label><i>&omega;<sub>x</sub></i>:</label></td>
+				<td><input id=42 class="p4" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>y</sub></i>:</label></td>
+				<td><input id=43 class="p4" value="-2000" size="6px"></td>
+				<td><label><i>&omega;<sub>z</sub></i>:</label></td>
+				<td><input id=44 class="p4" value="0" size="6px"></td>
+				<td><input id=45 type="checkbox" class="p4" checked=true></td>
+			</tr>
+			<tr>
+				<td><b id=50 style="color:rgb(255,0,255)">Pitch 5:</b></td>
+				<td><label><i>v</i>:</label></td>
+				<td><input id=51 class="p5" value="90" size="6px"></td>
+				<td><label><i>&omega;<sub>x</sub></i>:</label></td>
+				<td><input id=52 class="p5" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>y</sub></i>:</label></td>
+				<td><input id=53 class="p5" value="0" size="6px"></td>
+				<td><label><i>&omega;<sub>z</sub></i>:</label></td>
+				<td><input id=54 class="p5" value="2000" size="6px"></td>
+				<td><input id=55 type="checkbox" class="p5" checked=true></td>
+			</tr>
+		</table>
 	</center>
 	<center style="padding-bottom: 3px">
 		<input type="submit" value="See Pitches" onclick="main()">
@@ -90,6 +97,8 @@
 			<option value="kershaw">Clayton Kershaw</option>
 			<option value="cole">Gerrit Cole</option>
 			<option value="degrom">Jacob deGrom</option>
+			<option value="verlander">Justin Verlander</option>
+			<option value="bauer">Trevor Bauer</option>
 			<option value="glasnow">Tyler Glasnow</option>
 		</select>
 	</center>
